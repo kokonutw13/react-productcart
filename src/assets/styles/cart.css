@@ -1,0 +1,6 @@
+.cart{
+    height: 400px;
+    background-color: white;
+    padding: 23px;
+    grid-column: 5/-1;
+}
