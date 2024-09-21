@@ -1,35 +1,51 @@
 import './assets/styles/productcart.css';
 
 
-export const ProductCart = ({category,name,price,cantidad,image})=>{
+export const ProductCart = ({product, onIncrementar, onDecrementar})=>{
     
+    const {category,name,price,cantidad,image} = product
+
     return(
-        <>
-          <div className="card">
-          <div className="image">
-            <img src={"./src/"+ image.desktop} alt="" />
-            <div className="add-cart">
-              <div className="view">
-                <img className="cart-icon" src="./src/assets/images/icon-add-to-cart.svg" alt="" />
-                <p>Add to cart</p>
+          <>
+            <div className="card">
+              <div className="image">
+                <img
+                  src={`./src/${image.desktop}`}
+                  alt=""
+                  className={cantidad > 0 ? 'image-active' : ''}
+                />
+                <div className={`add-cart ${cantidad > 0 ? 'add-cart-hover' : ''}`}>
+                  <div className="view">
+                    <img
+                      className="cart-icon"
+                      src="./src/assets/images/icon-add-to-cart.svg"
+                      alt="Agregar al carrito"
+                    />
+                    <p>Add to cart</p>
+                  </div>
+                  <div className="active">
+                    <button className="less-icon" onClick={onDecrementar}>
+                      <img
+                        src="./src/assets/images/icon-decrement-quantity.svg"
+                        alt="Decrementar"
+                      />
+                    </button>
+                    <p className="count">{cantidad}</p>
+                    <button className="plus-icon" onClick={onIncrementar}>
+                      <img
+                        src="./src/assets/images/icon-increment-quantity.svg"
+                        alt="Incrementar"
+                      />
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div className="active">
-                <div className="less-icon">
-                  <img src="./src/assets/images/icon-decrement-quantity.svg" alt="" />
-                </div>
-                <p className="count">{cantidad}</p>
-                <div className="plus-icon">
-                  <img src="./src/assets/images/icon-increment-quantity.svg" alt="" />
-                </div>
+              <div className="info-food">
+                <p>{category}</p>
+                <h4>{name}</h4>
+                <p className="price">${price.toFixed(2)}</p>
               </div>
             </div>
-          </div>
-          <div className="info-food">
-              <p> { category } </p>
-              <h4> { name } </h4>
-              <p className="price"> ${ price.toFixed(2) } </p>
-            </div>
-          </div>
-        </>
+          </>
     )
 }

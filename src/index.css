@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'RedHatText';
-  src: url('/assets/fonts/static/RedHatText-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/static/RedHatText-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'RedHatText';
-  src: url('/assets/fonts/static/RedHatText-Bold.ttf') format('truetype');
+  src: url('./assets/fonts/static/RedHatText-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'RedHatText';
-  src: url('/assets/fonts/static/RedHatText-SemiBold.ttf') format('truetype');
+  src: url('./assets/fonts/static/RedHatText-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
@@ -59,12 +59,6 @@ p,h1,h2,h3,h4,h5,h6{
   margin: 0;
 }
 
-.grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column: 1 / 5;
-  row-gap: 35px;
-}
 
 .container{
   max-width: 1440px;

@@ -1,14 +1,7 @@
 
-.product_list_card{
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-}
-
-
-.product_list_card img{
-    max-width: 90%;
-    height: auto;
-    border-radius: 12px
-}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1 / 5;
+    row-gap: 35px;
+  }

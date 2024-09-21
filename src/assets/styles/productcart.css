@@ -21,14 +21,6 @@
     user-select: none;
 }
 
-.title {
-    grid-column: 1/-1;
-    font-size: 33px;
-    font-weight: 900;
-    color: var(--color-rose-900);
-    padding-bottom: 13px;
-}
-
 /* Price and product info */
 .price {
     color: var(--color-red);
@@ -86,9 +78,19 @@
     opacity: 0;
     display: none;
 }
-
+.add-cart:hover .active p, .add-cart-hover .active p {
+    opacity: 1;
+    font-weight: 400;
+    color: white;
+    font-size: 13px;
+    margin-top: -3px;
+}
 .add-cart:hover .cart-icon, .add-cart:hover p {
-    opacity: 0;
+    opacity: 1;
+    font-weight: 400;
+    color: white;
+    font-size: 13px;
+    margin-top: -3px;
 }
 
 .active {
@@ -159,4 +161,10 @@
     background-color: white;
     overflow-y: auto;
     box-sizing: border-box;
+}
+
+
+button{
+    background: 0;
+    padding: 0;
 }
