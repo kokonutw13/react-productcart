@@ -4,29 +4,39 @@ import  './assets/styles/productlist.css'
 
 import { useFetchData } from './hooks/useFetchData';
 import { Cart } from './Cart';
+import { Modal } from './Modal';
+import { useState } from 'react';
 
 function ProductList() {
 
       const {product, incrementar, decrementar,cart,eliminarProductCart} = useFetchData();
-
-
+      const [modalClicked, setmodalClicked] = useState(false)
+      const toggleModal  = ()=>{
+        setmodalClicked(modal => !modal)
+      }
   return (
     <>  
-        <div className="grid">
-        {product.map((product,index) => (
-            <ProductCart 
-            key={index}
-            product={product}
-            onIncrementar={()=> incrementar(index)}
-            onDecrementar={()=> decrementar(index)}
+        <div className="content">
+          <div className="grid">
+          {product.map((product,index) => (
+              <ProductCart 
+              key={index}
+              product={product}
+              onIncrementar={()=> incrementar(index)}
+              onDecrementar={()=> decrementar(index)}
+            />
+            ))}
+          </div>
+          <Cart
+            cart={cart}
+            onDelete={(productname)=> eliminarProductCart(productname)}
+            confirmOrder={toggleModal }
           />
-          ))}
         </div>
-        <Cart
-          cart={cart}
-          onDelete={(productname)=> eliminarProductCart(productname)}
-        />
-          
+
+        {modalClicked && (
+          <Modal style={{ display: 'block' }} onClose={toggleModal} cartModal={cart}/>
+        )}
 
     </>
   )

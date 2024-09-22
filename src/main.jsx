@@ -6,10 +6,7 @@ import './index.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <div className="container">
-        <div className="content">
-            <ProductList />  
-  
-        </div>
+          <ProductList />  
       </div>
   </StrictMode>,
 )

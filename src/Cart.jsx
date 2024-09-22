@@ -2,7 +2,7 @@ import "./assets/styles/cart.css";
 import { CartList } from "./CartList";
 import { useFetchData } from "./hooks/useFetchData";
 
-export const Cart = ({cart,onDelete})=> {
+export const Cart = ({cart,onDelete,confirmOrder})=> {
 
 
     return(
@@ -22,7 +22,7 @@ export const Cart = ({cart,onDelete})=> {
                 <div className="order">
                 <p>Order total: </p><span>${cart.reduce((acc,curr)=>acc + curr.price * curr.cantidad,0)}</span>
                 </div>
-                <button className="confirm-order">
+                <button onClick={confirmOrder} className="confirm-order">
                     Confirm Order
                 </button>
             </div>

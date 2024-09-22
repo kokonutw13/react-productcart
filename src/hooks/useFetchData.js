@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getData } from "../helpers/getData";
+import { getData } from "../helpers/getData.js";
 
 
 
