@@ -1,7 +1,7 @@
 
 
 export const getData = async()=>{
-    const URL = '/data.json';
+    const URL = './data.json';
     const respuesta = await fetch(URL);
     const data = await respuesta.json();
     const products = data.map(product=>({...product, cantidad: 0}) ) 

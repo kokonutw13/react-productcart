@@ -1,8 +1,7 @@
 import "./assets/styles/cart.css";
 import { CartList } from "./CartList";
-import { useFetchData } from "./hooks/useFetchData";
 
-export const Cart = ({cart,onDelete,confirmOrder})=> {
+export const Cart = ({ cart,onDelete,confirmOrder })=> {
 
 
     return(
