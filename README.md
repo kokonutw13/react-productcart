@@ -20,7 +20,7 @@
 
   
 
-![](src\assets\product.png)
+![](https://github.com/sunohara3/react-productcart/blob/main/src/assets/product.png)
 
 
 
