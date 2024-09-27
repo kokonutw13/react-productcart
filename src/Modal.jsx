@@ -5,7 +5,7 @@ export const Modal = ({ onClose, cartModal,buyProduct }) => {
     <div className="modal">
     <div className="modal-content">
         <div className="moda-image">
-            <img src="./src/assets/images/icon-order-confirmed.svg" alt="Confirmación de la compra" />
+            <img src="./images/icon-order-confirmed.svg" alt="Confirmación de la compra" />
         </div>
       <div className="top-modal">
         <h3>Order Confirmed</h3>
@@ -17,7 +17,7 @@ export const Modal = ({ onClose, cartModal,buyProduct }) => {
                     <li key={i} >
                       <div className="cantidad-item">
                         <div className="name-product">
-                          <img src={`./src/${image.thumbnail}`} alt="food" />
+                          <img src={`${image.thumbnail}`} alt="food" />
                           <p>{name} {cantidad} </p>
                         </div>
                         <div className="price">

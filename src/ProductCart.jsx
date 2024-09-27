@@ -10,7 +10,7 @@ export const ProductCart = ({product, onIncrementar, onDecrementar})=>{
             <div className="card">
               <div className="image">
                 <img
-                  src={`./src/${image.desktop}`}
+                  src={`${image.desktop}`}
                   alt=""
                   className={cantidad > 0 ? 'image-active' : ''}
                 />
@@ -18,7 +18,7 @@ export const ProductCart = ({product, onIncrementar, onDecrementar})=>{
                   <div className="view">
                     <img
                       className="cart-icon"
-                      src="./src/assets/images/icon-add-to-cart.svg"
+                      src="./images/icon-add-to-cart.svg"
                       alt="Agregar al carrito"
                     />
                     <p>Add to cart</p>
@@ -26,14 +26,14 @@ export const ProductCart = ({product, onIncrementar, onDecrementar})=>{
                   <div className="active">
                     <button className="less-icon" onClick={onDecrementar}>
                       <img
-                        src="./src/assets/images/icon-decrement-quantity.svg"
+                        src="./images/icon-decrement-quantity.svg"
                         alt="Decrementar"
                       />
                     </button>
                     <p className="count">{cantidad}</p>
                     <button className="plus-icon" onClick={onIncrementar}>
                       <img
-                        src="./src/assets/images/icon-increment-quantity.svg"
+                        src="./images/icon-increment-quantity.svg"
                         alt="Incrementar"
                       />
                     </button>

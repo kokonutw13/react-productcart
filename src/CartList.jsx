@@ -12,7 +12,7 @@ export const CartList = ( { name,cantidad,price,onDelete} ) => {
             </div>
         </div>
         <button className="borrar-product" onClick={ onDelete}>
-            <img src="./src/assets/images/icon-remove-item.svg" alt="remover" />
+            <img src="./images/icon-remove-item.svg" alt="remover" />
         </button>
         </li>
         <hr />
