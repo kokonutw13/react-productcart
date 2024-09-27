@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 function ProductList() {
 
-      const {product, incrementar, decrementar,cart,eliminarProductCart} = useFetchData();
+      const {product, incrementar, decrementar,cart,eliminarProductCart,comprarProducts} = useFetchData();
       const [modalClicked, setmodalClicked] = useState(false)
       const toggleModal  = ()=>{
         setmodalClicked(modal => !modal)
@@ -35,7 +35,7 @@ function ProductList() {
         </div>
 
         {modalClicked && (
-          <Modal style={{ display: 'block' }} onClose={toggleModal} cartModal={cart}/>
+          <Modal style={{ display: 'block' }} onClose={toggleModal} buyProduct={comprarProducts} cartModal={cart}/>
         )}
 
     </>

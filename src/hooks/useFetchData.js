@@ -46,7 +46,9 @@ export const useFetchData = ()=>{
       )
     }
 
-
+    const comprarProducts = ()=>{
+      setProducts((prev)=>prev.map(product=> ({...product, cantidad: 0})))
+    }
 
     const cartProduct = products.filter(product => product.cantidad > 0);
     
@@ -56,6 +58,7 @@ export const useFetchData = ()=>{
         incrementar,
         decrementar,
         cart: cartProduct,
-        eliminarProductCart
+        eliminarProductCart,
+        comprarProducts
     }
 }
