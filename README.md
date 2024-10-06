@@ -24,9 +24,7 @@
 
 
 
-**Link preview:** [React Cart](https://sunohara3.github.io/react-productcart/)
+**Link preview:** [React Cart](https://kokonutw13.github.io/react-productcart/)
 
   
-
-
 
