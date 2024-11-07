@@ -14,15 +14,14 @@ export const useFetchData = ()=>{
         setProducts(newData);
     }
         
-    //Creamos la función getProducts con async, por al razón que devuelve una promesa se creó
-    //esa funcion. Para poder asi luego llamarla dentro de un useEffect y evitar repetir la carga de un componente
+     // Usamos useEffect para llamar a getProducts una vez al montar el componente.
+    // Esto evita que los datos se vuelvan a cargar cada vez que el componente se renderiza.
     useEffect(() => {
       getProducts()
   }, [])
 
     
-    const incrementar = (idproduct)=>{     
-          //Me dio error porque estoy dentro de llaves y no di un Return, 
+    const incrementar = (idproduct)=>{ 
           //en i === keyindex verifico el producto escogido
           setProducts(prevProducts => prevProducts.map(
             (product, i) => i === idproduct ? { ...product, cantidad: product.cantidad + 1 } : product
@@ -31,7 +30,7 @@ export const useFetchData = ()=>{
   
     const decrementar = (idproduct) => {
       setProducts(prevData =>
-        //Aqui no le puse llaves,por lo tanto no me dará error porque ya esta el return por defecto
+
         prevData.map((product, i) =>
           i === idproduct && product.cantidad > 0 ? { ...product, cantidad: product.cantidad - 1 } : product
         )
